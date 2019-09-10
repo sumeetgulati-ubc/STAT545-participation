@@ -1,0 +1,27 @@
+---
+title: "My first RMarkdown File"
+subtitle: "Tibble Exploration"
+author: Sumeet Gulati
+output:
+  ioslides_presentation
+
+---
+
+```{r load, warning=FALSE, echo=FALSE}
+library(tibble)
+library(gapminder)
+library(DT)
+```
+## Print out gapminder data.
+
+```{r}
+gapminder
+```
+
+## Convert mtcars to a tibble and wrap in datatable
+```{r}
+datatable(as_tibble(mtcars))
+```
+<!--I am trying to see if we can write comments in R.Markdown-->
+<!--and it works just as designed-->
+

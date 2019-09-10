@@ -1,0 +1,31 @@
+---
+title: "My first RMarkdown File"
+subtitle: "Tibble Exploration"
+author: Sumeet Gulati
+output:
+  html_document: 
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r load, warning=FALSE, echo=FALSE}
+library(tibble)
+library(gapminder)
+library(DT)
+```
+## Print out gapminder data.
+
+```{r}
+gapminder
+```
+
+Convert mtcars to a tibble and wrap in datatable
+```{r}
+datatable(as_tibble(mtcars))
+```
+<!--I am trying to see if we can write comments in R.Markdown-->
+<!--and it works just as designed-->
+
